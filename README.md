@@ -34,7 +34,7 @@ During each run, the anomalies will start at randomized times within certain tim
 
 ## The Data
 
-The generated data is moved to the `dataset` directory and stored in folders based on which anomalies occurred during the run, whether they were seperate or overlapping, and their parameters (start and end times, as well as other parameters provided like cpuoccupy utilization or memleak size).  Anomalies are abbreviated (cpuoccupy as CO, memleak as ML, cachecopy as CC).  For example, an ExaMiniMD run where a `cpuoccupy -u 95` anomaly started at t=10 and ended at t=120, and a `cachecopy -c L1 -m 0.8` anomaly started at t=240 and ended at t=360, the results would be in `dataset/ExaMiniMD_CO_CC/separate/ST10_ET120_u95_ST240_ET360_cL1_m0.8`.
+The generated data is moved to the `dataset` directory and stored in folders based on which anomalies occurred during the run, whether they were seperate or overlapping, and their parameters (start and end times, as well as other parameters provided like cpuoccupy utilization or memleak size).  Anomalies are abbreviated (cpuoccupy as CO, memleak as ML, cachecopy as CC).  For example, for an ExaMiniMD run where a `cpuoccupy -u 95` anomaly started at t=10 and ended at t=120, and a `cachecopy -c L1 -m 0.8` anomaly started at t=240 and ended at t=360, the results would be in `dataset/ExaMiniMD_CO_CC/separate/ST10_ET120_u95_ST240_ET360_cL1_m0.8`.
 
 ## Notebook for Reading/Plotting Data
 
