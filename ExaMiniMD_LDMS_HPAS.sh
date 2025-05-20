@@ -5,6 +5,9 @@
 #SBATCH --time=30:00:00
 #SBATCH --exclusive
 
+if [ -d "data" ]; then :; else mkdir data; fi
+if [ -d "logs" ]; then :; else mkdir logs; fi
+
 sleep 30
 echo "ExaMiniMD"
 srun --exclusive --ntasks-per-node=1 --cpus-per-task=1 --mem=1G ldmsd -x sock:10001 -l logs/sampler.log -c conf/sampler.conf &
