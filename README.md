@@ -38,4 +38,4 @@ The generated data is moved to the `dataset` directory and stored in folders bas
 
 ## Notebook for Reading/Plotting Data
 
-The Jupyter Notebook `plot_data.ipynb` is a simple program to visualize the data.  Changing the values of the variables "application", "anom1", "anom1_params", "anom2", "anom2_params", "metric", and "norm" will change which data you visualize, and how you visualize it.
+The Jupyter Notebook `plot_data.ipynb` is a simple program to visualize the data.  It plots a graph for each metric in the plugin specified, and it plots four lines on each graph, one for the run without any anomalies, one for the run with just anomaly 1, one for the run with anomaly 1 and anomaly 2 separately, and one for the run with anomaly 1 and anomaly 2 overlapping.  Changing the values of the variables "application", "anom1", "anom1_params", "anom2", "anom2_params", "plugin", and "norm" will change which data you visualize, and how you visualize it.  Running the Jupyter Notebook cell will generate the graphs.
