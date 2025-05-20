@@ -29,7 +29,7 @@ def main():
     parser.add_argument("-n", "--name", type=str, help="name of application", required=True)
     parser.add_argument("-c", "--command", type=str, help="command to run application", required=True)
     parser.add_argument("-a", "--hpas_anomalies", type=list[str],
-                        help="list of anomaly commands without start times or durations, e.g., [\"cpuoccupy -u 95\",\"memleak -s 10M\"]",
+                        help="list of anomaly commands WITHOUT start times or durations, e.g., [\"cpuoccupy -u 95\",\"memleak -s 10M\",\"cachecopy -c L1 -m 0.8\"]",
                         default=["cpuoccupy -u 95","memleak -s 10M","cachecopy -c L1 -m 0.8","cachecopy -c L2 -m 0.8","cachecopy -c L3 -m 0.8"])
     parser.add_argument("-lsa", "--ldmsd_srun_args", type=str,
                         help="srun arguments for ldms daemons, e.g., \"--exclusive --ntasks-per-node=1 --cpus-per-task=1 --mem=1G\"",
@@ -47,13 +47,14 @@ def main():
 
     logging.info("Starting to generate the script...")
 
-    # Header
+    # Header with sbatch parameters
     script = "#!/bin/bash\n"
     script += "#SBATCH --job-name=" + args.name + "_LDMS_HPAS\n"
     for sbatch_arg in args.sbatch:
         script += "#SBATCH " + sbatch_arg + "\n"
     script += "\n"
 
+    # Create "data" and "logs" directories if they don't exist
     script += "if [ -d \"data\" ]; then :; else mkdir data; fi\n"
     script += "if [ -d \"logs\" ]; then :; else mkdir logs; fi\n\n"
 
@@ -71,11 +72,11 @@ def main():
     script += "APP_DUR=$(($APP_END_TIME - $APP_START_TIME))\n"
     script += "kill $LDMS_AGG_PID\n"
     script += "kill $LDMS_SAMPLER_PID\n"
-    script += "if (($APP_DUR < 60)); then\n"
+    script += "if (($APP_DUR < 60)); then\n" # If app doesn't run long enough, abort
     script += "  echo \"App duration less than 60 seconds - too short!\"\n"
     script += "  exit\n"
     script += "fi\n"
-    script += "if [ -d \"dataset/" + args.name + "\" ]; then\n"
+    script += "if [ -d \"dataset/" + args.name + "\" ]; then\n" # If plain run has already been done, discard generated data
     script += "  rm -r data\n"
     script += "  rm -r logs\n"
     script += "else\n"
@@ -86,14 +87,14 @@ def main():
     script += "mkdir data\n"
     script += "mkdir logs\n\n"
 
-    # Get anomaly abbreviations
+    # Get anomaly abbreviations for use in directory names
     abbrevs = []
     for anom in args.hpas_anomalies:
         for entry in anom_dict:
             if anom.startswith(entry):
                 abbrevs.append(anom_dict[entry])
 
-    # Get anomaly parameters
+    # Get anomaly parameters for use in directory names
     list_of_params = []
     for anom in args.hpas_anomalies:
         params = re.findall(r'[-](.) ([^ ]+)', anom)
@@ -107,7 +108,7 @@ def main():
         if args.wait:
             script += "sleep " + str(args.wait) + "\n"
         script += "echo \"" + args.name + "_" + abbrevs[i] + "\"\n"
-        script += "ANOM_START_TIME=$(($APP_DUR / 12 + RANDOM % $APP_DUR / 6))\n"
+        script += "ANOM_START_TIME=$(($APP_DUR / 12 + RANDOM % $APP_DUR / 6))\n" # calculate anomaly start and end times
         script += "ANOM_END_TIME=$(($APP_DUR * 7 / 12 + RANDOM % $APP_DUR / 6))\n"
         script += "srun " + args.ldmsd_srun_args + " ldmsd -x sock:10001 -l logs/sampler.log -c conf/sampler.conf &\n"
         script += "LDMS_SAMPLER_PID=$!\n"
@@ -138,7 +139,7 @@ def main():
                 if args.wait:
                     script += "sleep " + str(args.wait) + "\n"
                 script += "echo \"" + args.name + "_" + abbrevs[i] + "_" + abbrevs[j] + "/separate\"\n"
-                script += "ANOM1_START_TIME=$(($APP_DUR / 15 + RANDOM % $APP_DUR / 10))\n"
+                script += "ANOM1_START_TIME=$(($APP_DUR / 15 + RANDOM % $APP_DUR / 10))\n" # calculate anomaly start and end times
                 script += "ANOM1_END_TIME=$(($APP_DUR * 4 / 15 + $APP_DUR / 60 + RANDOM % $APP_DUR / 10))\n"
                 script += "ANOM2_START_TIME=$(($APP_DUR * 7 / 15 + RANDOM % $APP_DUR / 10))\n"
                 script += "ANOM2_END_TIME=$(($APP_DUR * 10 / 15 + $APP_DUR / 60 + RANDOM % $APP_DUR / 10))\n"
@@ -175,7 +176,7 @@ def main():
                 if args.wait:
                     script += "sleep " + str(args.wait) + "\n"
                 script += "echo \"" + args.name + "_" + abbrevs[i] + "_" + abbrevs[j] + "/overlaps\"\n"
-                script += "ANOM1_START_TIME=$(($APP_DUR / 15 + RANDOM % $APP_DUR / 10))\n"
+                script += "ANOM1_START_TIME=$(($APP_DUR / 15 + RANDOM % $APP_DUR / 10))\n" # calculate anomaly start and end times
                 script += "ANOM1_END_TIME=$(($APP_DUR * 8 / 15 + RANDOM % $APP_DUR / 10))\n"
                 script += "ANOM2_START_TIME=$(($APP_DUR * 3 / 15 + $APP_DUR / 60 + RANDOM % $APP_DUR / 10))\n"
                 script += "ANOM2_END_TIME=$(($APP_DUR * 10 / 15 + $APP_DUR / 60 + RANDOM % $APP_DUR / 10))\n"
