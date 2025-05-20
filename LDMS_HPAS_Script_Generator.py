@@ -54,6 +54,9 @@ def main():
         script += "#SBATCH " + sbatch_arg + "\n"
     script += "\n"
 
+    script += "if [ -d \"data\" ]; then :; else mkdir data; fi\n"
+    script += "if [ -d \"logs\" ]; then :; else mkdir logs; fi\n\n"
+
     # Run with no anomalies
     if args.wait:
         script += "sleep " + str(args.wait) + "\n"
