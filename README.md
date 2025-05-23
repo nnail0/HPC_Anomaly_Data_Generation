@@ -46,4 +46,4 @@ The Jupyter Notebook `plot_data.ipynb` is a simple program to visualize the data
 
 Some of the graphs won't show data depending on the nature of their metric, but most of the graphs should appear similar to this:
 
-![Screenshot_20250523_090840_Chrome](https://github.com/user-attachments/assets/9c7d6890-351e-4b31-8a7a-e710665004e4)
+![image](https://github.com/user-attachments/assets/7d15ec87-216c-42bd-a316-96a55be9ceae)
