@@ -10,6 +10,8 @@ LDMS samples a system's metrics and records them.  This project uses LDMS to gen
     - [LDMS Quick Start](https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/intro/quick-start.html)
     - [LDMS Tutorial Slides](https://sites.google.com/view/ldmscon2024/tutorials/tutorial-slides)
 
+The data generation scripts in this project use the configuration files in the conf directory for the ldms daemons.  The parameters in those configuration files may need to be adjusted depending on the system.
+
 ### HPAS (HPC Performance Anomaly Suite)
 
 HPAS contains anomalies that can be executed while an application runs to simulate anomalous behavior.  This project gathers data while an application runs alongside one or more anomalies to see how they affect the system metrics.  This project only uses "cpuoccupy", "memleak", and "cachecopy", but could be adapted to use others.  Here are some resources for using HPAS:
@@ -34,7 +36,7 @@ During each run, the anomalies will start at randomized times within certain tim
 
 ## The Data
 
-The generated data is moved to the `dataset` directory and stored in folders based on which anomalies occurred during the run, whether they were seperate or overlapping, and their parameters (start and end times, as well as other parameters provided like cpuoccupy utilization or memleak size).  Anomalies are abbreviated (cpuoccupy as CO, memleak as ML, cachecopy as CC).  For example, for an ExaMiniMD run where a `cpuoccupy -u 95` anomaly started at t=10 and ended at t=120, and a `cachecopy -c L1 -m 0.8` anomaly started at t=240 and ended at t=360, the results would be in `dataset/ExaMiniMD_CO_CC/separate/ST10_ET120_u95_ST240_ET360_cL1_m0.8`.
+LDMS stores the csvs in a `data` directory, and the logs in a `logs` directory, then copies them to a subdirectory in the `dataset` directory.  These subdirectories are named based on which anomalies occurred during the run, whether they were seperate or overlapping, and their parameters (start and end times, as well as other parameters provided like cpuoccupy utilization or memleak size).  Anomalies are abbreviated (cpuoccupy as CO, memleak as ML, cachecopy as CC).  For example, for an ExaMiniMD run where a `cpuoccupy -u 95` anomaly started at t=10 and ended at t=120, and a `cachecopy -c L1 -m 0.8` anomaly started at t=240 and ended at t=360, the results would be in `dataset/ExaMiniMD_CO_CC/separate/ST10_ET120_u95_ST240_ET360_cL1_m0.8`.
 
 ## Notebook for Reading/Plotting Data
 
