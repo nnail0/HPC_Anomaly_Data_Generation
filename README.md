@@ -10,7 +10,7 @@ LDMS samples a system's metrics and records them.  This project uses LDMS to gen
     - [LDMS Quick Start](https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/intro/quick-start.html)
     - [LDMS Tutorial Slides](https://sites.google.com/view/ldmscon2024/tutorials/tutorial-slides)
 
-The data generation scripts in this project use the configuration files in the conf directory for the ldms daemons.  The parameters in those configuration files may need to be adjusted depending on the system.
+The data generation scripts in this project use the configuration files in the `conf` directory for the ldms daemons.  The parameters in those configuration files may need to be adjusted depending on the system.
 
 ### HPAS (HPC Performance Anomaly Suite)
 
