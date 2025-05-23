@@ -27,8 +27,10 @@ While generating data, this project runs proxy apps, which are simplified codes 
 
 ## Data Generation Scripts
 
-`LDMS_HPAS_Script_Generator.py` takes arguments specifying the details and parameters of the data generation, and creates a Slurm sbatch script that will generate the data.  The default values are set to work for a single node CPU (60G RAM, 1 socket, 10 cores per socket, and 2 threads per core) but by adjusting the sbatch arguments and srun arguments for the LDMS daemons, the HPAS anomalies, and the application, the script should work for any system in the way desired.
+`LDMS_HPAS_Script_Generator.py` takes arguments specifying the details and parameters of the data generation, and creates a Slurm sbatch script that will generate the data.  The default values (defaults are found in the parser.add_argument functions in the script generator) are set to work for a single node CPU (60G RAM, 1 socket, 10 cores per socket, and 2 threads per core), but by adjusting the sbatch arguments and srun arguments (for the LDMS daemons, the HPAS anomalies, and the application), the script should work for any system as desired.
  - Note: run `python LDMS_HPAS_Script_Generator.py -h` to see available parameters and their descriptions/formats.
+ - The command that created the `ExaminiMD_LDMS_HPAS.sh` script file in this project was `python LDMS_HPAS_Script_Generator.py -n ExaMiniMD -c "ExaMiniMD -il ./input_files/ExaMiniMD_in.lj --comm-type MPI`
+ - To run the script once it has been generated, use the command `sbatch <script_name.sh>`.  Slurm must be installed to run the scripts as they are currently generated.
 
 By default, the script generator will gather data for a run of the application without any anomalies, a run of the application for each single anomaly provided to the `--hpas_anomalies` option, and two runs of the application for each possible combination of two anomalies - one with the two not overlapping (separate), and one with the two overlapping.  Fewer permutations may be specified by setting the `--multiple` option to "none", "separate", or "overlapping".
 
@@ -41,3 +43,7 @@ LDMS stores the csvs in a `data` directory, and the logs in a `logs` directory, 
 ## Notebook for Reading/Plotting Data
 
 The Jupyter Notebook `plot_data.ipynb` is a simple program to visualize the data.  It plots a graph for each metric in the plugin specified, and it plots four lines on each graph, one for the run without any anomalies, one for the run with just anomaly 1, one for the run with anomaly 1 and anomaly 2 separately, and one for the run with anomaly 1 and anomaly 2 overlapping.  Changing the values of the variables "application", "anom1", "anom1_params", "anom2", "anom2_params", "plugin", and "norm" will change which data you visualize, and how you visualize it.  Running the Jupyter Notebook cell will generate the graphs.
+
+Some of the graphs won't show data depending on the nature of their metric, but most of the graphs should appear similar to this:
+
+![Screenshot_20250523_090840_Chrome](https://github.com/user-attachments/assets/9c7d6890-351e-4b31-8a7a-e710665004e4)
