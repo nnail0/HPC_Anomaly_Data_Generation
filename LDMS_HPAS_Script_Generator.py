@@ -83,6 +83,7 @@ def main():
     script += "  mkdir dataset/" + args.name + "\n"
     script += "  mv data dataset/" + args.name + "\n"
     script += "  mv logs dataset/" + args.name + "\n"
+    script += "  mv slurm-* dataset/" + args.name + "\n"
     script += "fi\n"
     script += "mkdir data\n"
     script += "mkdir logs\n\n"
@@ -128,6 +129,7 @@ def main():
         script += "  mkdir dataset/" + args.name + "_" + abbrevs[i] + "/ST${ANOM_START_TIME}_ET${ANOM_END_TIME}" + list_of_params[i] + "\n"
         script += "  mv data dataset/" + args.name + "_" + abbrevs[i] + "/ST${ANOM_START_TIME}_ET${ANOM_END_TIME}" + list_of_params[i] + "\n"
         script += "  mv logs dataset/" + args.name + "_" + abbrevs[i] + "/ST${ANOM_START_TIME}_ET${ANOM_END_TIME}" + list_of_params[i] + "\n"
+        script += "  mv slurm-* dataset/" + args.name + "_" + abbrevs[i] + "/ST${ANOM_START_TIME}_ET${ANOM_END_TIME}" + list_of_params[i] + "\n"
         script += "fi\n"
         script += "mkdir data\n"
         script += "mkdir logs\n\n"
@@ -165,6 +167,7 @@ def main():
                 script += "  mkdir dataset/" + args.name + "_" + abbrevs[i] + "_" + abbrevs[j] + "/separate/ST${ANOM1_START_TIME}_ET${ANOM1_END_TIME}" + list_of_params[i] + "_ST${ANOM2_START_TIME}_ET${ANOM2_END_TIME}" + list_of_params[j] + "\n"
                 script += "  mv data dataset/" + args.name + "_" + abbrevs[i] + "_" + abbrevs[j] + "/separate/ST${ANOM1_START_TIME}_ET${ANOM1_END_TIME}" + list_of_params[i] + "_ST${ANOM2_START_TIME}_ET${ANOM2_END_TIME}" + list_of_params[j] + "\n"
                 script += "  mv logs dataset/" + args.name + "_" + abbrevs[i] + "_" + abbrevs[j] + "/separate/ST${ANOM1_START_TIME}_ET${ANOM1_END_TIME}" + list_of_params[i] + "_ST${ANOM2_START_TIME}_ET${ANOM2_END_TIME}" + list_of_params[j] + "\n"
+                script += "  mv slurm-* dataset/" + args.name + "_" + abbrevs[i] + "_" + abbrevs[j] + "/separate/ST${ANOM1_START_TIME}_ET${ANOM1_END_TIME}" + list_of_params[i] + "_ST${ANOM2_START_TIME}_ET${ANOM2_END_TIME}" + list_of_params[j] + "\n"
                 script += "fi\n"
                 script += "mkdir data\n"
                 script += "mkdir logs\n\n"
@@ -202,9 +205,13 @@ def main():
                 script += "  mkdir dataset/" + args.name + "_" + abbrevs[i] + "_" + abbrevs[j] + "/overlaps/ST${ANOM1_START_TIME}_ET${ANOM1_END_TIME}" + list_of_params[i] + "_ST${ANOM2_START_TIME}_ET${ANOM2_END_TIME}" + list_of_params[j] + "\n"
                 script += "  mv data dataset/" + args.name + "_" + abbrevs[i] + "_" + abbrevs[j] + "/overlaps/ST${ANOM1_START_TIME}_ET${ANOM1_END_TIME}" + list_of_params[i] + "_ST${ANOM2_START_TIME}_ET${ANOM2_END_TIME}" + list_of_params[j] + "\n"
                 script += "  mv logs dataset/" + args.name + "_" + abbrevs[i] + "_" + abbrevs[j] + "/overlaps/ST${ANOM1_START_TIME}_ET${ANOM1_END_TIME}" + list_of_params[i] + "_ST${ANOM2_START_TIME}_ET${ANOM2_END_TIME}" + list_of_params[j] + "\n"
+                script += "  mv slurm-* dataset/" + args.name + "_" + abbrevs[i] + "_" + abbrevs[j] + "/overlaps/ST${ANOM1_START_TIME}_ET${ANOM1_END_TIME}" + list_of_params[i] + "_ST${ANOM2_START_TIME}_ET${ANOM2_END_TIME}" + list_of_params[j] + "\n"
                 script += "fi\n"
                 script += "mkdir data\n"
                 script += "mkdir logs\n\n"
+
+    # kill processes to ensure no conflicts with future runs.
+    script += "killall ldmsd \n"
 
     with open (args.name + "_LDMS_HPAS.sh", "w") as script_file:
         script_file.write(script)
