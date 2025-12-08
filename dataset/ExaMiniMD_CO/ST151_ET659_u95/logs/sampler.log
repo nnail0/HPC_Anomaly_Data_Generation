@@ -1,0 +1,19 @@
+Mon Aug 18 14:11:41 2025: INFO      : Listening on sock:10001 using `sock` transport and `none` authentication
+Mon Aug 18 14:11:41 2025: DEBUG     : Checking for meminfo in /home/nathaniel-filer/ovis/4.4.2/lib/ovis-ldms
+Mon Aug 18 14:11:41 2025: DEBUG     : msg_no 1 flags 3 rec_len 28 rsp_err 0
+Mon Aug 18 14:11:41 2025: DEBUG     : msg_no 2 flags 3 rec_len 28 rsp_err 0
+Mon Aug 18 14:11:41 2025: DEBUG     : msg_no 3 flags 3 rec_len 28 rsp_err 0
+Mon Aug 18 14:11:41 2025: DEBUG     : Checking for vmstat in /home/nathaniel-filer/ovis/4.4.2/lib/ovis-ldms
+Mon Aug 18 14:11:41 2025: DEBUG     : msg_no 5 flags 3 rec_len 28 rsp_err 0
+Mon Aug 18 14:11:41 2025: DEBUG     : msg_no 6 flags 3 rec_len 28 rsp_err 0
+Mon Aug 18 14:11:41 2025: DEBUG     : msg_no 7 flags 3 rec_len 28 rsp_err 0
+Mon Aug 18 14:11:41 2025: DEBUG     : Checking for procstat in /home/nathaniel-filer/ovis/4.4.2/lib/ovis-ldms
+Mon Aug 18 14:11:41 2025: DEBUG     : msg_no 9 flags 3 rec_len 28 rsp_err 0
+Mon Aug 18 14:11:41 2025: DEBUG     : msg_no 10 flags 3 rec_len 28 rsp_err 0
+Mon Aug 18 14:11:41 2025: DEBUG     : msg_no 11 flags 3 rec_len 28 rsp_err 0
+Mon Aug 18 14:11:41 2025: INFO      : Processing the config file 'conf/sampler.conf' is done.
+Mon Aug 18 14:11:41 2025: INFO      : Enabling in-band config
+Mon Aug 18 14:11:42 2025: INFO      : meminfo: The job data set named, job_info, does not exist. Valid job data will not be associated with the metric values.
+Mon Aug 18 14:11:42 2025: INFO      : procstat: The job data set named, job_info, does not exist. Valid job data will not be associated with the metric values.
+Mon Aug 18 14:11:42 2025: INFO      : vmstat: The job data set named, job_info, does not exist. Valid job data will not be associated with the metric values.
+*** buffer overflow detected ***: terminated

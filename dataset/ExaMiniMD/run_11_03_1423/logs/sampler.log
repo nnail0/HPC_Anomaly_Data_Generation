@@ -1,0 +1,25 @@
+Mon Nov 03 14:05:41 2025: ERROR     : Existing pid file named '/home/nathaniel-filer/ldmsd.pid': overwritten if writable
+Mon Nov 03 14:05:41 2025: ERROR     : Existing banner file named '/home/nathaniel-filer/ldmsd.pid.version': overwritten if writable
+Mon Nov 03 14:05:41 2025: INFO      : Listening on sock:10001 using `sock` transport and `none` authentication
+Mon Nov 03 14:05:41 2025: DEBUG     : Checking for meminfo in /home/nathaniel-filer/ldms/lib64/ovis-ldms
+Mon Nov 03 14:05:41 2025: DEBUG     : msg_no 1 flags 3 rec_len 28 rsp_err 0
+Mon Nov 03 14:05:41 2025: DEBUG     : msg_no 2 flags 3 rec_len 28 rsp_err 0
+Mon Nov 03 14:05:41 2025: DEBUG     : msg_no 3 flags 3 rec_len 28 rsp_err 0
+Mon Nov 03 14:05:41 2025: DEBUG     : Checking for vmstat in /home/nathaniel-filer/ldms/lib64/ovis-ldms
+Mon Nov 03 14:05:41 2025: DEBUG     : msg_no 5 flags 3 rec_len 28 rsp_err 0
+Mon Nov 03 14:05:41 2025: DEBUG     : msg_no 6 flags 3 rec_len 28 rsp_err 0
+Mon Nov 03 14:05:41 2025: DEBUG     : msg_no 7 flags 3 rec_len 28 rsp_err 0
+Mon Nov 03 14:05:41 2025: DEBUG     : Checking for procstat in /home/nathaniel-filer/ldms/lib64/ovis-ldms
+Mon Nov 03 14:05:41 2025: DEBUG     : msg_no 9 flags 3 rec_len 28 rsp_err 0
+Mon Nov 03 14:05:41 2025: DEBUG     : msg_no 10 flags 3 rec_len 28 rsp_err 0
+Mon Nov 03 14:05:41 2025: DEBUG     : msg_no 11 flags 3 rec_len 28 rsp_err 0
+Mon Nov 03 14:05:41 2025: INFO      : Processing the config file 'conf/sampler.conf' is done.
+Mon Nov 03 14:05:41 2025: INFO      : Enabling in-band config
+Mon Nov 03 14:05:41 2025: INFO      : meminfo: The job data set named, job_info, does not exist. Valid job data will not be associated with the metric values.
+Mon Nov 03 14:05:41 2025: INFO      : procstat: The job data set named, job_info, does not exist. Valid job data will not be associated with the metric values.
+Mon Nov 03 14:05:41 2025: INFO      : vmstat: The job data set named, job_info, does not exist. Valid job data will not be associated with the metric values.
+Mon Nov 03 14:23:16 2025: INFO      : signo : 15
+Mon Nov 03 14:23:16 2025: INFO      : si_pid: 251506
+Mon Nov 03 14:23:16 2025: DEBUG     : mmap use at exit: mm_stat: size=524288 grain=1024 chunks_free=1 grains_free=492 grains_largest=492 grains_smallest=492 bytes_free=503808 bytes_largest=503808 bytes_smallest=503808 bytes_used+holes=20480
+Mon Nov 03 14:23:16 2025:           : LDMSD_ LDMS Daemon exiting...status 0, 
+Mon Nov 03 14:23:16 2025:           : LDMSD_ cleanup end.

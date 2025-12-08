@@ -23,12 +23,12 @@ def main():
 
     # Parse command-line arguments
     parser = argparse.ArgumentParser(description="Parser for LDMS/HPAS script generator.")
-    parser.add_argument("-s", "--sbatch", type=list[str],
+    parser.add_argument("-s", "--sbatch", nargs = "*",
                         help="sbatch arguments separated by commas, e.g., [\"--partition=local\",\"--nodes=1\",\"--time=30:00\",\"--exclusive\"]",
                         default=["--partition=local","--nodes=1","--time=30:00:00","--exclusive"])
     parser.add_argument("-n", "--name", type=str, help="name of application", required=True)
     parser.add_argument("-c", "--command", type=str, help="command to run application", required=True)
-    parser.add_argument("-a", "--hpas_anomalies", type=list[str],
+    parser.add_argument("-a", "--hpas_anomalies", nargs = "*",
                         help="list of anomaly commands WITHOUT start times or durations, e.g., [\"cpuoccupy -u 95\",\"memleak -s 10M\",\"cachecopy -c L1 -m 0.8\"]",
                         default=["cpuoccupy -u 95","memleak -s 10M","cachecopy -c L1 -m 0.8","cachecopy -c L2 -m 0.8","cachecopy -c L3 -m 0.8"])
     parser.add_argument("-lsa", "--ldmsd_srun_args", type=str,

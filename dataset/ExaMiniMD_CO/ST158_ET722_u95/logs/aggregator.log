@@ -1,0 +1,5 @@
+Mon Jul 14 13:16:08 2025: ERROR     : Existing pid file named '/tmp/nathaniel-filer/ldms/ldmsd.pid': overwritten if writable
+Mon Jul 14 13:16:08 2025: ERROR     : Existing banner file named '/tmp/nathaniel-filer/ldms/ldmsd.pid.version': overwritten if writable
+Mon Jul 14 13:16:08 2025: ERROR     : Error 8 Listening on sock:20001 using `sock` transport and `none` authentication
+Mon Jul 14 13:16:08 2025: LDMSD_ LDMS Daemon exiting...status 7, error listening on transport
+Mon Jul 14 13:16:08 2025: LDMSD_ cleanup end.

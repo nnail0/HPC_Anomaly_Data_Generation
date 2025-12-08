@@ -1,0 +1,5 @@
+Mon Oct 27 12:17:48 2025: ERROR     : Could not open the pid file named '/tmp/nailc/ldms/ldmsd.pid': No such file or directory
+Mon Oct 27 12:17:48 2025: ERROR     : Error 8 Listening on sock:20001 using `sock` transport and `none` authentication
+Mon Oct 27 12:17:48 2025: DEBUG     : mmap use at exit: mm_stat: size=524288 grain=1024 chunks_free=1 grains_free=512 grains_largest=512 grains_smallest=512 bytes_free=524288 bytes_largest=524288 bytes_smallest=524288 bytes_used+holes=0
+Mon Oct 27 12:17:48 2025:           : LDMSD_ LDMS Daemon exiting...status 7, error listening on transport
+Mon Oct 27 12:17:48 2025:           : LDMSD_ cleanup end.
