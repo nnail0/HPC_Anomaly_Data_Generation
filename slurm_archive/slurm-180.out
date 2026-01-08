@@ -1,0 +1,56 @@
+ExaMiniMD
+376162
+376163
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 70.432084 2.505077e+06
+20 0.772053 -5.390495 -4.232416 188.100113 1.499454e+06
+30 0.620846 -5.164015 -4.232746 257.544740 2.540697e+06
+40 0.717872 -5.309763 -4.232956 374.151780 1.513097e+06
+50 0.714213 -5.304141 -4.232821 442.810842 2.569767e+06
+60 0.708668 -5.295827 -4.232825 559.015443 1.518337e+06
+70 0.717530 -5.309131 -4.232837 627.820867 2.564300e+06
+80 0.726155 -5.322068 -4.232835 754.644539 1.391205e+06
+90 0.730632 -5.328778 -4.232830 825.607672 2.486330e+06
+100 0.733009 -5.332341 -4.232827 943.096977 1.501735e+06
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 943.096985 604.426943 231.104126 2.641580 104.924148 | 0.106034 1.870834e+06 1.870834e+06 PERFORMANCE
+/var/lib/slurm/slurmd/job00180/slurm_script: line 22: kill: (376163) - No such process
+/var/lib/slurm/slurmd/job00180/slurm_script: line 23: kill: (376162) - No such process

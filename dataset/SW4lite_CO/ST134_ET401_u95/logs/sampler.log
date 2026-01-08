@@ -1,0 +1,4 @@
+Thu Dec 18 15:02:48 2025: ERROR     : Could not open the pid file named '/var/run/ldmsd.pid': Permission denied
+Thu Dec 18 15:02:48 2025: ERROR     : Error 8 Listening on sock:10001 using `sock` transport and `none` authentication
+Thu Dec 18 15:02:48 2025:           : LDMSD_ LDMS Daemon exiting...status 7, error listening on transport
+Thu Dec 18 15:02:48 2025:           : LDMSD_ cleanup end.

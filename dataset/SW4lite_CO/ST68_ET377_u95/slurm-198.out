@@ -1,0 +1,304 @@
+SW4lite
+
+* Processing the grid command...
+* Setting nx to 401 to be consistent with h=0.02
+* Setting ny to 401 to be consistent with h=0.02
+* Setting nz to 201 to be consistent with h=0.02
+defineDimensionsGXY: #ghost points=2, #parallel padding points=2
+Extent of the computational domain xmax=8 ymax=8 zmin = 0 zmax=4
+***inside setupMPICommunications***
+
+Global grid sizes (without ghost points)
+Grid         h        Nx        Ny        Nz       Points
+   0      0.02       401       401       201     32321001
+Total number of grid points (without ghost points): 3.2321e+07
+
+Done reading input file 
+ no GPUs found
+Setting up SBP boundary stencils
+----------------------------------------------------
+ Making Output Directory: pointsource-h0p04/
+		
+... Done!
+----------------------------------------------------
+Detected at least one boundary with supergrid conditions
+*** computing the time step ***
+ CFL= 1.3 prel. time step=0.0132681
+number of grid point  sources = 216
+number of unique g.p. sources = 216
+setup of sources done
+Running on 1 MPI tasks
+Using OpenMP with 20 threads per MPI task
+starting at time 0 at cycle 1
+Time step 1 t= 0.0133333
+Time step 45 t= 0.6
+   Execution time, solver phase 7 minutes 1.53112 seconds 
+
+----------------------------------------
+          Execution time summary 
+  Total      BC comm    BC phys    Scheme     Supergrid  Forcing 
+411.96     0.00018688 3.7847     314.35     88.355     5.4617     Clock tick is 1e-09 seconds
+----------------------------------------
+
+Errors at time 0.6 Linf = 2.56719 L2 = 0.0388654 norm of solution = 12.2129
+ Total running time: 620.205
+/var/lib/slurm/slurmd/job00198/slurm_script: line 20: kill: (623012) - No such process
+/var/lib/slurm/slurmd/job00198/slurm_script: line 21: kill: (623011) - No such process
+SW4lite_CO
+
+* Processing the grid command...
+* Setting nx to 401 to be consistent with h=0.02
+* Setting ny to 401 to be consistent with h=0.02
+* Setting nz to 201 to be consistent with h=0.02
+defineDimensionsGXY: #ghost points=2, #parallel padding points=2
+Extent of the computational domain xmax=8 ymax=8 zmin = 0 zmax=4
+***inside setupMPICommunications***
+
+Global grid sizes (without ghost points)
+Grid         h        Nx        Ny        Nz       Points
+   0      0.02       401       401       201     32321001
+Total number of grid points (without ghost points): 3.2321e+07
+
+Done reading input file 
+ no GPUs found
+Setting up SBP boundary stencils
+----------------------------------------------------
+ Making Output Directory: pointsource-h0p04/
+		
+... Done!
+----------------------------------------------------
+Detected at least one boundary with supergrid conditions
+*** computing the time step ***
+ CFL= 1.3 prel. time step=0.0132681
+number of grid point  sources = 216
+number of unique g.p. sources = 216
+setup of sources done
+Running on 1 MPI tasks
+Using OpenMP with 20 threads per MPI task
+starting at time 0 at cycle 1
+Time step 1 t= 0.0133333
+Mon Dec 15 18:41:31 2025
+Starting cpuoccupy with utilization:95%
+
+Exiting cpuoccupy, duration=310s
+Time step 45 t= 0.6
+   Execution time, solver phase 7 minutes 20.3148 seconds 
+
+----------------------------------------
+          Execution time summary 
+  Total      BC comm    BC phys    Scheme     Supergrid  Forcing 
+430.76     0.00018774 3.6202     329.3      91.986     5.8544     Clock tick is 1e-09 seconds
+----------------------------------------
+
+Errors at time 0.6 Linf = 2.56719 L2 = 0.0388654 norm of solution = 12.2129
+ Total running time: 638.744
+/var/lib/slurm/slurmd/job00198/slurm_script: line 48: kill: (623133) - No such process
+/var/lib/slurm/slurmd/job00198/slurm_script: line 49: kill: (623132) - No such process
+SW4lite_ML
+
+* Processing the grid command...
+* Setting nx to 401 to be consistent with h=0.02
+* Setting ny to 401 to be consistent with h=0.02
+* Setting nz to 201 to be consistent with h=0.02
+defineDimensionsGXY: #ghost points=2, #parallel padding points=2
+Extent of the computational domain xmax=8 ymax=8 zmin = 0 zmax=4
+***inside setupMPICommunications***
+
+Global grid sizes (without ghost points)
+Grid         h        Nx        Ny        Nz       Points
+   0      0.02       401       401       201     32321001
+Total number of grid points (without ghost points): 3.2321e+07
+
+Done reading input file 
+ no GPUs found
+Setting up SBP boundary stencils
+----------------------------------------------------
+ Making Output Directory: pointsource-h0p04/
+		
+... Done!
+----------------------------------------------------
+Detected at least one boundary with supergrid conditions
+*** computing the time step ***
+ CFL= 1.3 prel. time step=0.0132681
+number of grid point  sources = 216
+number of unique g.p. sources = 216
+setup of sources done
+Running on 1 MPI tasks
+Using OpenMP with 20 threads per MPI task
+starting at time 0 at cycle 1
+Time step 1 t= 0.0133333
+Mon Dec 15 18:53:01 2025
+Starting leak with size:10485760 period:0.200000 duration:316.000000
+
+Time step 45 t= 0.6
+   Execution time, solver phase 7 minutes 1.38263 seconds 
+
+----------------------------------------
+          Execution time summary 
+  Total      BC comm    BC phys    Scheme     Supergrid  Forcing 
+411.82     0.00018183 3.7811     314.29     88.249     5.5        Clock tick is 1e-09 seconds
+----------------------------------------
+
+Mon Dec 15 18:58:17 2025
+Finished leak.
+Errors at time 0.6 Linf = 2.56719 L2 = 0.0388654 norm of solution = 12.2129
+ Total running time: 619.08
+/var/lib/slurm/slurmd/job00198/slurm_script: line 74: kill: (623273) - No such process
+/var/lib/slurm/slurmd/job00198/slurm_script: line 75: kill: (623272) - No such process
+mv: cannot stat 'slurm-*': No such file or directory
+SW4lite_CC
+
+* Processing the grid command...
+* Setting nx to 401 to be consistent with h=0.02
+* Setting ny to 401 to be consistent with h=0.02
+* Setting nz to 201 to be consistent with h=0.02
+defineDimensionsGXY: #ghost points=2, #parallel padding points=2
+Extent of the computational domain xmax=8 ymax=8 zmin = 0 zmax=4
+***inside setupMPICommunications***
+
+Global grid sizes (without ghost points)
+Grid         h        Nx        Ny        Nz       Points
+   0      0.02       401       401       201     32321001
+Total number of grid points (without ghost points): 3.2321e+07
+
+Done reading input file 
+ no GPUs found
+Setting up SBP boundary stencils
+----------------------------------------------------
+ Making Output Directory: pointsource-h0p04/
+		
+... Done!
+----------------------------------------------------
+Detected at least one boundary with supergrid conditions
+*** computing the time step ***
+ CFL= 1.3 prel. time step=0.0132681
+number of grid point  sources = 216
+number of unique g.p. sources = 216
+setup of sources done
+Running on 1 MPI tasks
+Using OpenMP with 20 threads per MPI task
+starting at time 0 at cycle 1
+Time step 1 t= 0.0133333
+Mon Dec 15 19:03:34 2025
+Starting cache with ndouble:3276 period:0.000000 duration:247.000000
+
+
+Finished cache anomaly
+Time step 45 t= 0.6
+   Execution time, solver phase 7 minutes 16.0873 seconds 
+
+----------------------------------------
+          Execution time summary 
+  Total      BC comm    BC phys    Scheme     Supergrid  Forcing 
+426.52     0.00018171 3.7091     325.37     91.659     5.7774     Clock tick is 1e-09 seconds
+----------------------------------------
+
+Errors at time 0.6 Linf = 2.56719 L2 = 0.0388654 norm of solution = 12.2129
+ Total running time: 634.897
+/var/lib/slurm/slurmd/job00198/slurm_script: line 100: kill: (623410) - No such process
+/var/lib/slurm/slurmd/job00198/slurm_script: line 101: kill: (623409) - No such process
+mv: cannot stat 'slurm-*': No such file or directory
+SW4lite_CC
+
+* Processing the grid command...
+* Setting nx to 401 to be consistent with h=0.02
+* Setting ny to 401 to be consistent with h=0.02
+* Setting nz to 201 to be consistent with h=0.02
+defineDimensionsGXY: #ghost points=2, #parallel padding points=2
+Extent of the computational domain xmax=8 ymax=8 zmin = 0 zmax=4
+***inside setupMPICommunications***
+
+Global grid sizes (without ghost points)
+Grid         h        Nx        Ny        Nz       Points
+   0      0.02       401       401       201     32321001
+Total number of grid points (without ghost points): 3.2321e+07
+
+Done reading input file 
+ no GPUs found
+Setting up SBP boundary stencils
+----------------------------------------------------
+ Making Output Directory: pointsource-h0p04/
+		
+... Done!
+----------------------------------------------------
+Detected at least one boundary with supergrid conditions
+*** computing the time step ***
+ CFL= 1.3 prel. time step=0.0132681
+number of grid point  sources = 216
+number of unique g.p. sources = 216
+setup of sources done
+Running on 1 MPI tasks
+Using OpenMP with 20 threads per MPI task
+starting at time 0 at cycle 1
+Time step 1 t= 0.0133333
+Mon Dec 15 19:14:23 2025
+Starting cache with ndouble:26214 period:0.000000 duration:270.000000
+
+
+Finished cache anomaly
+Time step 45 t= 0.6
+   Execution time, solver phase 7 minutes 23.2311 seconds 
+
+----------------------------------------
+          Execution time summary 
+  Total      BC comm    BC phys    Scheme     Supergrid  Forcing 
+433.65     0.00018264 3.6738     330.99     93.187     5.8016     Clock tick is 1e-09 seconds
+----------------------------------------
+
+Errors at time 0.6 Linf = 2.56719 L2 = 0.0388654 norm of solution = 12.2129
+ Total running time: 640.873
+/var/lib/slurm/slurmd/job00198/slurm_script: line 126: kill: (623547) - No such process
+/var/lib/slurm/slurmd/job00198/slurm_script: line 127: kill: (623546) - No such process
+mv: cannot stat 'slurm-*': No such file or directory
+SW4lite_CC
+
+* Processing the grid command...
+* Setting nx to 401 to be consistent with h=0.02
+* Setting ny to 401 to be consistent with h=0.02
+* Setting nz to 201 to be consistent with h=0.02
+defineDimensionsGXY: #ghost points=2, #parallel padding points=2
+Extent of the computational domain xmax=8 ymax=8 zmin = 0 zmax=4
+***inside setupMPICommunications***
+
+Global grid sizes (without ghost points)
+Grid         h        Nx        Ny        Nz       Points
+   0      0.02       401       401       201     32321001
+Total number of grid points (without ghost points): 3.2321e+07
+
+Done reading input file 
+ no GPUs found
+Setting up SBP boundary stencils
+----------------------------------------------------
+ Making Output Directory: pointsource-h0p04/
+		
+... Done!
+----------------------------------------------------
+Detected at least one boundary with supergrid conditions
+*** computing the time step ***
+ CFL= 1.3 prel. time step=0.0132681
+number of grid point  sources = 216
+number of unique g.p. sources = 216
+setup of sources done
+Running on 1 MPI tasks
+Using OpenMP with 20 threads per MPI task
+starting at time 0 at cycle 1
+Time step 1 t= 0.0133333
+Mon Dec 15 19:25:03 2025
+Starting cache with ndouble:2097152 period:0.000000 duration:314.000000
+
+
+Finished cache anomaly
+Time step 45 t= 0.6
+   Execution time, solver phase 7 minutes 35.7635 seconds 
+
+----------------------------------------
+          Execution time summary 
+  Total      BC comm    BC phys    Scheme     Supergrid  Forcing 
+446.2      0.00020304 3.7894     338.49     97.789     6.1287     Clock tick is 1e-09 seconds
+----------------------------------------
+
+Errors at time 0.6 Linf = 2.56719 L2 = 0.0388654 norm of solution = 12.2129
+ Total running time: 653.545
+/var/lib/slurm/slurmd/job00198/slurm_script: line 152: kill: (623695) - No such process
+/var/lib/slurm/slurmd/job00198/slurm_script: line 153: kill: (623694) - No such process
+mv: cannot stat 'slurm-*': No such file or directory
