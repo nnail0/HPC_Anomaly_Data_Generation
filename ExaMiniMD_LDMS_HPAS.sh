@@ -8,13 +8,21 @@
 if [ -d "data" ]; then :; else mkdir data; fi
 if [ -d "logs" ]; then :; else mkdir logs; fi
 
+# define a SUBSCRIBER_DATA env var to point to json file. 
+# export SUBSCRIBER_DATA='{"papi_sampler":{"file":"/home/nathaniel-filer/papi.json"}}'
+
 echo "ExaMiniMD"
-srun --exclusive --ntasks-per-node=1 --cpus-per-task=1 --mem=1G ldmsd -x sock:10001 -l logs/sampler.log -c conf/sampler.conf &
+srun --exclusive --ntasks=1 --ntasks-per-node=1 --cpus-per-task=1 --mem=1G ldmsd -x sock:10001 -l logs/sampler.log -c conf/sampler.conf  -v DEBUG &
 LDMS_SAMPLER_PID=$!
-srun --exclusive --ntasks-per-node=1 --cpus-per-task=1 --mem=1G ldmsd -x sock:20001 -l logs/aggregator.log -c conf/aggregator.conf &
+srun --exclusive --ntasks=1 --ntasks-per-node=1 --cpus-per-task=1 --mem=1G ldmsd -x sock:20001 -l logs/aggregator.log -c conf/aggregator.conf &
 LDMS_AGG_PID=$!
 APP_START_TIME=$(date +%s)
-srun --exclusive --cpu-bind=verbose --ntasks-per-node=1 --cpus-per-task=8 --mem=20G ExaMiniMD -il ./input_files/ExaMiniMD_in.lj --comm-type MPI
+
+sleep 5
+
+srun --exclusive --ntasks=1 --cpu-bind=verbose --ntasks-per-node=1 --cpus-per-task=8 --mem=20G ExaMiniMD -il ./input_files/ExaMiniMD_in.lj --comm-type MPI
+APP_PID=$!
+echo $APP_PID
 APP_END_TIME=$(date +%s)
 APP_DUR=$(($APP_END_TIME - $APP_START_TIME))
 kill $LDMS_AGG_PID
@@ -34,6 +42,8 @@ else
 fi
 mkdir data
 mkdir logs
+
+exit 
 
 echo "ExaMiniMD_CO"
 ANOM_START_TIME=$(($APP_DUR / 12 + RANDOM % $APP_DUR / 6))

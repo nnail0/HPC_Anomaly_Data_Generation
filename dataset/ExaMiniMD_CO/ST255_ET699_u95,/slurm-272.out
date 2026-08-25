@@ -1,0 +1,11 @@
+ExaMiniMD
+srun: error: Invalid numeric value "1--cpu-bind=verbose" for --ntasks.
+App duration less than 60 seconds - too short!
+srun: forcing job termination
+srun: forcing job termination
+srun: StepId=272.1 aborted before step completely launched.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: StepId=272.0 aborted before step completely launched.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd-localhost: error: *** STEP 272.0 ON localhost CANCELLED AT 2026-04-21T12:19:02 ***
+slurmstepd-localhost: error: *** STEP 272.1 ON localhost CANCELLED AT 2026-04-21T12:19:02 ***

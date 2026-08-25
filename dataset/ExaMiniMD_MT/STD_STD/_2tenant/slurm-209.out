@@ -1,0 +1,670 @@
+Baseline single-tenant run
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 70.410888 2.505831e+06
+20 0.772053 -5.390495 -4.232416 188.177457 1.498199e+06
+30 0.620846 -5.164015 -4.232746 257.619395 2.540795e+06
+40 0.717872 -5.309763 -4.232956 374.233817 1.513001e+06
+50 0.714213 -5.304141 -4.232821 442.928447 2.568436e+06
+60 0.708668 -5.295827 -4.232825 559.112750 1.518602e+06
+70 0.717530 -5.309131 -4.232837 627.838953 2.567256e+06
+80 0.726155 -5.322068 -4.232835 744.195911 1.516349e+06
+90 0.730632 -5.328778 -4.232830 812.812554 2.571355e+06
+100 0.733009 -5.332341 -4.232827 929.245417 1.515360e+06
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 929.245426 594.320349 228.333905 2.417649 104.173296 | 0.107614 1.898721e+06 1.898721e+06 PERFORMANCE
+Running STD_STD
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 141.760989 1.244614e+06
+20 0.772053 -5.390495 -4.232416 378.194988 7.462453e+05
+30 0.620846 -5.164015 -4.232746 517.911010 1.262831e+06
+40 0.717872 -5.309763 -4.232956 752.490985 7.521433e+05
+50 0.714213 -5.304141 -4.232821 890.285984 1.280437e+06
+60 0.708668 -5.295827 -4.232825 1123.253658 7.573487e+05
+70 0.717530 -5.309131 -4.232837 1260.876506 1.282038e+06
+80 0.726155 -5.322068 -4.232835 1493.242215 7.593107e+05
+90 0.730632 -5.328778 -4.232830 1630.105118 1.289157e+06
+100 0.733009 -5.332341 -4.232827 1861.090981 7.638466e+05
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 1861.090989 1190.528012 456.311325 7.320370 206.931058 | 0.053732 9.480340e+05 9.480340e+05 PERFORMANCE
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 141.713387 1.245032e+06
+20 0.772053 -5.390495 -4.232416 378.453233 7.452812e+05
+30 0.620846 -5.164015 -4.232746 518.173589 1.262792e+06
+40 0.717872 -5.309763 -4.232956 753.129609 7.509395e+05
+50 0.714213 -5.304141 -4.232821 891.261974 1.277309e+06
+60 0.708668 -5.295827 -4.232825 1124.496382 7.564826e+05
+70 0.717530 -5.309131 -4.232837 1262.854370 1.275226e+06
+80 0.726155 -5.322068 -4.232835 1496.285243 7.558459e+05
+90 0.730632 -5.328778 -4.232830 1634.795856 1.273821e+06
+100 0.733009 -5.332341 -4.232827 1868.151105 7.560908e+05
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 1868.151112 1195.954911 456.861561 7.601591 207.732837 | 0.053529 9.444512e+05 9.444512e+05 PERFORMANCE
+Running STD_CO
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 141.536365 1.246590e+06
+20 0.772053 -5.390495 -4.232416 378.082127 7.458927e+05
+30 0.620846 -5.164015 -4.232746 517.640867 1.264254e+06
+40 0.717872 -5.309763 -4.232956 751.315865 7.550562e+05
+50 0.714213 -5.304141 -4.232821 888.669543 1.284551e+06
+60 0.708668 -5.295827 -4.232825 1120.685930 7.604539e+05
+70 0.717530 -5.309131 -4.232837 1257.998813 1.284932e+06
+80 0.726155 -5.322068 -4.232835 1489.473864 7.622323e+05
+90 0.730632 -5.328778 -4.232830 1627.231863 1.280780e+06
+100 0.733009 -5.332341 -4.232827 1858.811863 7.618869e+05
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 1858.811872 1188.956129 455.321067 7.048939 207.485492 | 0.053798 9.491964e+05 9.491964e+05 PERFORMANCE
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 142.008598 1.242444e+06
+20 0.772053 -5.390495 -4.232416 379.377138 7.433073e+05
+30 0.620846 -5.164015 -4.232746 519.785009 1.256609e+06
+40 0.717872 -5.309763 -4.232956 754.188750 7.527088e+05
+50 0.714213 -5.304141 -4.232821 892.020795 1.280092e+06
+60 0.708668 -5.295827 -4.232825 1125.053009 7.571389e+05
+70 0.717530 -5.309131 -4.232837 1262.801256 1.280871e+06
+80 0.726155 -5.322068 -4.232835 1496.027008 7.565106e+05
+90 0.730632 -5.328778 -4.232830 1633.301999 1.285287e+06
+100 0.733009 -5.332341 -4.232827 1865.777008 7.589536e+05
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 1865.777016 1191.757061 457.110410 8.211051 208.698274 | 0.053597 9.456530e+05 9.456530e+05 PERFORMANCE
+Running STD_ML
+Host Parallel Execution Space:
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+  KOKKOS_ENABLE_OPENMP: yes
+
+
+OpenMP Runtime Configuration:
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+
+#InputFile:
+#InputFile:
+#=========================================================
+#=========================================================
+# 3d Lennard-Jones melt 
+# 3d Lennard-Jones melt 
+
+
+units lj 
+units lj 
+atom_style atomic 
+atom_style atomic 
+
+
+newton off 
+newton off 
+lattice fcc 0.8442 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_box 1 box 
+create_atoms 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+mass 1 2.0 
+
+
+velocity all create 1.4 87287 loop geom 
+velocity all create 1.4 87287 loop geom 
+
+
+pair_style lj/cut 2.5 
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+
+neighbor 0.3 bin 
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+fix 1 all nve 
+thermo 10 
+thermo 10 
+
+
+run 100 
+run 100 
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 141.463753 1.247229e+06
+20 0.772053 -5.390495 -4.232416 378.092771 7.456303e+05
+30 0.620846 -5.164015 -4.232746 517.736547 1.263485e+06
+40 0.717872 -5.309763 -4.232956 752.069601 7.529359e+05
+50 0.714213 -5.304141 -4.232821 888.982641 1.288685e+06
+60 0.708668 -5.295827 -4.232825 1120.669600 7.615351e+05
+70 0.717530 -5.309131 -4.232837 1257.806354 1.286583e+06
+80 0.726155 -5.322068 -4.232835 1489.087600 7.628710e+05
+90 0.730632 -5.328778 -4.232830 1626.657600 1.282531e+06
+100 0.733009 -5.332341 -4.232827 1858.353276 7.615065e+05
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 1858.353285 1188.067264 455.497017 7.088156 207.700629 | 0.053811 9.494307e+05 9.494307e+05 PERFORMANCE
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 141.448307 1.247366e+06
+20 0.772053 -5.390495 -4.232416 378.486649 7.443427e+05
+30 0.620846 -5.164015 -4.232746 518.772799 1.257699e+06
+40 0.717872 -5.309763 -4.232956 754.113989 7.497105e+05
+50 0.714213 -5.304141 -4.232821 892.274015 1.277054e+06
+60 0.708668 -5.295827 -4.232825 1125.417990 7.567760e+05
+70 0.717530 -5.309131 -4.232837 1263.166991 1.280864e+06
+80 0.726155 -5.322068 -4.232835 1496.117288 7.574052e+05
+90 0.730632 -5.328778 -4.232830 1633.408276 1.285137e+06
+100 0.733009 -5.332341 -4.232827 1865.677811 7.596251e+05
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 1865.677819 1192.307509 457.487440 7.942943 207.939704 | 0.053600 9.457033e+05 9.457033e+05 PERFORMANCE
+Running STD_CC
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 141.634990 1.245722e+06
+20 0.772053 -5.390495 -4.232416 378.668988 7.443563e+05
+30 0.620846 -5.164015 -4.232746 518.420989 1.262506e+06
+40 0.717872 -5.309763 -4.232956 752.530505 7.536548e+05
+50 0.714213 -5.304141 -4.232821 890.167989 1.281902e+06
+60 0.708668 -5.295827 -4.232825 1122.725719 7.586837e+05
+70 0.717530 -5.309131 -4.232837 1260.201483 1.283410e+06
+80 0.726155 -5.322068 -4.232835 1492.859145 7.583578e+05
+90 0.730632 -5.328778 -4.232830 1630.257990 1.284128e+06
+100 0.733009 -5.332341 -4.232827 1862.507988 7.596890e+05
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 1862.507997 1191.088163 457.900560 6.960143 206.558841 | 0.053691 9.473128e+05 9.473128e+05 PERFORMANCE
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 141.649991 1.245590e+06
+20 0.772053 -5.390495 -4.232416 378.933991 7.435721e+05
+30 0.620846 -5.164015 -4.232746 518.731990 1.262091e+06
+40 0.717872 -5.309763 -4.232956 753.078187 7.528936e+05
+50 0.714213 -5.304141 -4.232821 890.488991 1.284017e+06
+60 0.708668 -5.295827 -4.232825 1123.330988 7.577575e+05
+70 0.717530 -5.309131 -4.232837 1260.751911 1.283922e+06
+80 0.726155 -5.322068 -4.232835 1493.303993 7.587021e+05
+90 0.730632 -5.328778 -4.232830 1630.550549 1.285553e+06
+100 0.733009 -5.332341 -4.232827 1863.063361 7.588303e+05
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 1863.063369 1192.648224 458.342907 6.569697 205.502333 | 0.053675 9.470304e+05 9.470304e+05 PERFORMANCE
+Running CO_ML
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 140.642019 1.254517e+06
+20 0.772053 -5.390495 -4.232416 376.311833 7.486651e+05
+30 0.620846 -5.164015 -4.232746 515.643884 1.266311e+06
+40 0.717872 -5.309763 -4.232956 749.630833 7.540496e+05
+50 0.714213 -5.304141 -4.232821 886.706754 1.287154e+06
+60 0.708668 -5.295827 -4.232825 1118.206120 7.621522e+05
+70 0.717530 -5.309131 -4.232837 1255.417799 1.285880e+06
+80 0.726155 -5.322068 -4.232835 1486.610834 7.631621e+05
+90 0.730632 -5.328778 -4.232830 1624.056934 1.283687e+06
+100 0.733009 -5.332341 -4.232827 1855.409125 7.626371e+05
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 1855.409134 1185.670934 454.980187 7.160488 207.597298 | 0.053896 9.509372e+05 9.509372e+05 PERFORMANCE
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 141.241000 1.249196e+06
+20 0.772053 -5.390495 -4.232416 377.757884 7.459838e+05
+30 0.620846 -5.164015 -4.232746 517.404988 1.263454e+06
+40 0.717872 -5.309763 -4.232956 752.126783 7.516889e+05
+50 0.714213 -5.304141 -4.232821 889.694800 1.282549e+06
+60 0.708668 -5.295827 -4.232825 1122.292988 7.585517e+05
+70 0.717530 -5.309131 -4.232837 1259.601943 1.284969e+06
+80 0.726155 -5.322068 -4.232835 1491.956329 7.593477e+05
+90 0.730632 -5.328778 -4.232830 1629.002957 1.287429e+06
+100 0.733009 -5.332341 -4.232827 1861.274988 7.596169e+05
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 1861.274997 1188.012294 456.322359 8.012955 208.927141 | 0.053727 9.479403e+05 9.479403e+05 PERFORMANCE
+Running CO_CC
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 141.128117 1.250196e+06
+20 0.772053 -5.390495 -4.232416 377.463456 7.465568e+05
+30 0.620846 -5.164015 -4.232746 517.133486 1.263247e+06
+40 0.717872 -5.309763 -4.232956 751.227680 7.537041e+05
+50 0.714213 -5.304141 -4.232821 888.702686 1.283417e+06
+60 0.708668 -5.295827 -4.232825 1120.854062 7.600117e+05
+70 0.717530 -5.309131 -4.232837 1258.241133 1.284238e+06
+80 0.726155 -5.322068 -4.232835 1490.070678 7.610668e+05
+90 0.730632 -5.328778 -4.232830 1627.625814 1.282669e+06
+100 0.733009 -5.332341 -4.232827 1858.873380 7.629821e+05
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 1858.873388 1187.854453 455.109614 7.212220 208.696886 | 0.053796 9.491650e+05 9.491650e+05 PERFORMANCE
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 141.539988 1.246558e+06
+20 0.772053 -5.390495 -4.232416 378.537989 7.444694e+05
+30 0.620846 -5.164015 -4.232746 518.454544 1.261021e+06
+40 0.717872 -5.309763 -4.232956 753.136309 7.518171e+05
+50 0.714213 -5.304141 -4.232821 890.937505 1.280379e+06
+60 0.708668 -5.295827 -4.232825 1124.016322 7.569875e+05
+70 0.717530 -5.309131 -4.232837 1261.755988 1.280951e+06
+80 0.726155 -5.322068 -4.232835 1495.029428 7.563560e+05
+90 0.730632 -5.328778 -4.232830 1632.429626 1.284116e+06
+100 0.733009 -5.332341 -4.232827 1865.249735 7.578287e+05
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 1865.249744 1190.125291 458.450689 8.010048 208.663452 | 0.053612 9.459203e+05 9.459203e+05 PERFORMANCE

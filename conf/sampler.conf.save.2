@@ -1,0 +1,30 @@
+msg_enable
+stream_enable
+
+# subscribe to slurm (this is not necessary!)
+# prdcr_subscribe regex=.* message_channel=slurm2
+
+load name=slurm_sampler
+config name=slurm_sampler producer=ubuntu-rog instance=ubuntu-rog/slurm stream=slurm2
+start name=slurm_sampler interval=1000000 offset=0
+
+load name=meminfo
+config name=meminfo producer=ubuntu-rog instance=ubuntu-rog/meminfo component_id=1
+start name=meminfo interval=1000000
+
+load name=vmstat
+config name=vmstat producer=ubuntu-rog instance=ubuntu-rog/vmstat component_id=1
+start name=vmstat interval=1000000
+
+load name=procstat
+config name=procstat producer=ubuntu-rog instance=ubuntu-rog/procstat component_id=1
+start name=procstat interval=1000000 
+
+load name=papi_sampler
+config name=papi_sampler producer=ubuntu-rog instance=ubuntu-rog/papi_sampler component_id=1 stream=slurm2
+start name=papi_sampler interval=1000000 offset=0  
+
+# this is needed? no. 
+# load name=slurm_notifier
+# config name=slurm_notifier producer=ubuntu-rog instance=ubuntu-rog/slurm_notifier component_id=1 stream=slurm2 client=sock:localhost:10001
+# start name=slurm_notifier interval=1000000 offset=0

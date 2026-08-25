@@ -1,0 +1,14 @@
+ExaMiniMD
+App duration less than 60 seconds - too short!
+srun: forcing job termination
+srun: forcing job termination
+srun: StepId=265.2 aborted before step completely launched.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: StepId=265.0 aborted before step completely launched.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: StepId=265.1 aborted before step completely launched.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd-localhost: error: *** STEP 265.2 ON localhost CANCELLED AT 2026-04-10T14:40:40 ***
+slurmstepd-localhost: error: *** STEP 265.0 ON localhost CANCELLED AT 2026-04-10T14:40:40 ***
+slurmstepd-localhost: error: *** STEP 265.1 ON localhost CANCELLED AT 2026-04-10T14:40:40 ***
+srun: error: localhost: task 0: Terminated

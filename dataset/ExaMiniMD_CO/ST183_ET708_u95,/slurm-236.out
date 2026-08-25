@@ -1,0 +1,16 @@
+ExaMiniMD
+1813954
+1813955
+Initalization time: 0
+srun: error: Unable to create step for job 236: More processors requested than permitted
+
+srun: error: Unable to create step for job 236: More processors requested than permitted
+
+App duration:  0
+srun: forcing job termination
+App duration less than 60 seconds - too short!
+srun: Cancelled pending job step with signal 15
+srun: error: Unable to create step for job 236: Job/step already completing or completed
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: localhost: task 0: Exited with exit code 2
+slurmstepd-localhost: error: *** STEP 236.0 ON localhost CANCELLED AT 2026-03-03T12:44:30 ***

@@ -1,0 +1,29 @@
+    ERROR: sampler.papi_sampler.papi_sampler: papi_sampler[916]: Error 95 attempting subscribe to the 'slurm' stream.
+    ERROR: config: msg_no 14: error 95: Error 95 configuring plugin instance 'papi_sampler'.
+    ERROR: config: Configuration error at line 14 (conf/sampler.conf)
+         : ldmsd: LDMSD_ LDMS Daemon exiting...status 95, Error 95 processing configuration file 'conf/sampler.conf'
+         : ldmsd: LDMSD_ cleanup end.
+    ERROR: ldmsd: Existing pid file named '/home/nathaniel-filer/ldmsd.pid': overwritten if writable
+    ERROR: ldmsd: Existing banner file named '/home/nathaniel-filer/ldmsd.pid.version': overwritten if writable
+     INFO: ldmsd: Listening on sock:10001 using `sock` transport and `none` authentication
+    DEBUG: config: Checking for 'meminfo' in '/home/nathaniel-filer/ldms/lib/ovis-ldms'
+    DEBUG: config: msg_no 1 flags 3 rec_len 28 rsp_err 0
+    DEBUG: config: msg_no 2 flags 3 rec_len 28 rsp_err 0
+    DEBUG: config: msg_no 3 flags 3 rec_len 28 rsp_err 0
+    DEBUG: config: Checking for 'vmstat' in '/home/nathaniel-filer/ldms/lib/ovis-ldms'
+    DEBUG: config: msg_no 5 flags 3 rec_len 28 rsp_err 0
+    DEBUG: config: msg_no 6 flags 3 rec_len 28 rsp_err 0
+    DEBUG: config: msg_no 7 flags 3 rec_len 28 rsp_err 0
+    DEBUG: config: Checking for 'procstat' in '/home/nathaniel-filer/ldms/lib/ovis-ldms'
+    DEBUG: config: msg_no 9 flags 3 rec_len 28 rsp_err 0
+    DEBUG: config: msg_no 10 flags 3 rec_len 28 rsp_err 0
+    DEBUG: config: msg_no 11 flags 3 rec_len 28 rsp_err 0
+    DEBUG: config: Checking for 'papi_sampler' in '/home/nathaniel-filer/ldms/lib/ovis-ldms'
+    DEBUG: config: msg_no 13 flags 3 rec_len 28 rsp_err 0
+    ERROR: sampler.papi_sampler.papi_sampler: papi_sampler[916]: Error 95 attempting subscribe to the 'slurm' stream.
+    DEBUG: config: msg_no 14 flags 3 rec_len 93 rsp_err 95
+    ERROR: config: msg_no 14: error 95: Error 95 configuring plugin instance 'papi_sampler'.
+    ERROR: config: Configuration error at line 14 (conf/sampler.conf)
+    DEBUG: ldmsd: mmap use at exit: mm_stat: size=524288 grain=1024 chunks_free=1 grains_free=492 grains_largest=492 grains_smallest=492 bytes_free=503808 bytes_largest=503808 bytes_smallest=503808 bytes_used+holes=20480
+         : ldmsd: LDMSD_ LDMS Daemon exiting...status 95, Error 95 processing configuration file 'conf/sampler.conf'
+         : ldmsd: LDMSD_ cleanup end.

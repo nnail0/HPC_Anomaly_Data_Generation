@@ -1,0 +1,14 @@
+ExaMiniMD
+1816093
+1816094
+Initalization time: 0
+srun: error: Unable to create step for job 241: More processors requested than permitted
+
+srun: error: Unable to create step for job 241: More processors requested than permitted
+srun: error: localhost: task 0: Exited with exit code 2
+
+App duration:  0
+srun: Cancelled pending job step with signal 15
+srun: error: Unable to create step for job 241: Job/step already completing or completed
+/var/lib/slurm/slurmd/job00241/slurm_script: line 38: kill: (1816093) - No such process
+App duration less than 60 seconds - too short!

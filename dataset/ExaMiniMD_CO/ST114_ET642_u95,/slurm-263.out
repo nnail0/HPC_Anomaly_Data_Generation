@@ -1,0 +1,389 @@
+ExaMiniMD
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 70.740930 2.494140e+06
+20 0.772053 -5.390495 -4.232416 188.907023 1.493134e+06
+30 0.620846 -5.164015 -4.232746 258.639711 2.530202e+06
+40 0.717872 -5.309763 -4.232956 375.643896 1.507961e+06
+50 0.714213 -5.304141 -4.232821 444.397962 2.566216e+06
+60 0.708668 -5.295827 -4.232825 560.691471 1.517176e+06
+70 0.717530 -5.309131 -4.232837 629.572050 2.561502e+06
+80 0.726155 -5.322068 -4.232835 745.720766 1.519068e+06
+90 0.730632 -5.328778 -4.232830 814.345628 2.571047e+06
+100 0.733009 -5.332341 -4.232827 930.533070 1.518561e+06
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 930.533077 595.824683 228.604139 2.422221 103.681861 | 0.107465 1.896093e+06 1.896093e+06 PERFORMANCE
+srun: forcing job termination
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd-localhost: error: *** STEP 263.1 ON localhost CANCELLED AT 2026-03-24T15:05:48 ***
+slurmstepd-localhost: error: *** STEP 263.0 ON localhost CANCELLED AT 2026-03-24T15:05:48 ***
+ExaMiniMD_CO
+srun: error: localhost: task 0: Killed
+srun: error: localhost: task 0: Killed
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+Tue Mar 24 15:07:42 2026
+Starting cpuoccupy with utilization:95%
+
+Exiting cpuoccupy, duration=529s
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 77.564847 2.274713e+06
+20 0.772053 -5.390495 -4.232416 203.406067 1.402067e+06
+30 0.620846 -5.164015 -4.232746 279.470847 2.319572e+06
+40 0.717872 -5.309763 -4.232956 404.774847 1.408078e+06
+50 0.714213 -5.304141 -4.232821 479.151084 2.372233e+06
+60 0.708668 -5.295827 -4.232825 599.509791 1.465933e+06
+70 0.717530 -5.309131 -4.232837 668.871928 2.543719e+06
+80 0.726155 -5.322068 -4.232835 785.599130 1.511539e+06
+90 0.730632 -5.328778 -4.232830 854.872569 2.546976e+06
+100 0.733009 -5.332341 -4.232827 971.607716 1.511436e+06
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 971.607723 627.592218 230.319037 2.671556 111.024745 | 0.102922 1.815936e+06 1.815936e+06 PERFORMANCE
+srun: forcing job termination
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd-localhost: error: *** STEP 263.3 ON localhost CANCELLED AT 2026-03-24T15:24:03 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd-localhost: error: *** STEP 263.5 ON localhost CANCELLED AT 2026-03-24T15:24:03 ***
+ExaMiniMD_ML
+srun: error: localhost: task 0: Killed
+srun: error: localhost: task 0: Killed
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+Tue Mar 24 15:27:44 2026
+Starting leak with size:10485760 period:0.200000 duration:562.000000
+
+Tue Mar 24 15:37:06 2026
+Finished leak.
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 70.736835 2.494284e+06
+20 0.772053 -5.390495 -4.232416 189.152658 1.489985e+06
+30 0.620846 -5.164015 -4.232746 259.175681 2.519711e+06
+40 0.717872 -5.309763 -4.232956 376.664290 1.501744e+06
+50 0.714213 -5.304141 -4.232821 445.742898 2.554159e+06
+60 0.708668 -5.295827 -4.232825 562.300818 1.513735e+06
+70 0.717530 -5.309131 -4.232837 631.113106 2.564044e+06
+80 0.726155 -5.322068 -4.232835 747.879932 1.511026e+06
+90 0.730632 -5.328778 -4.232830 816.493605 2.571466e+06
+100 0.733009 -5.332341 -4.232827 932.704307 1.518257e+06
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 932.704314 597.758145 228.796290 2.435679 103.713971 | 0.107215 1.891679e+06 1.891679e+06 PERFORMANCE
+srun: forcing job termination
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd-localhost: error: *** STEP 263.9 ON localhost CANCELLED AT 2026-03-24T15:41:39 ***
+mv: cannot stat 'slurm-*': No such file or directory
+slurmstepd-localhost: error: *** STEP 263.7 ON localhost CANCELLED AT 2026-03-24T15:41:39 ***
+ExaMiniMD_CC
+srun: error: localhost: task 0: Killed
+srun: error: localhost: task 0: Killed
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+Tue Mar 24 15:45:34 2026
+Starting cache with ndouble:3276 period:0.000000 duration:481.000000
+
+
+Finished cache anomaly
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 70.842777 2.490554e+06
+20 0.772053 -5.390495 -4.232416 192.349236 1.452085e+06
+30 0.620846 -5.164015 -4.232746 267.053892 2.361804e+06
+40 0.717872 -5.309763 -4.232956 391.439833 1.418470e+06
+50 0.714213 -5.304141 -4.232821 465.961212 2.367613e+06
+60 0.708668 -5.295827 -4.232825 588.783716 1.436526e+06
+70 0.717530 -5.309131 -4.232837 658.346947 2.536365e+06
+80 0.726155 -5.322068 -4.232835 774.656624 1.516965e+06
+90 0.730632 -5.328778 -4.232830 843.353970 2.568334e+06
+100 0.733009 -5.332341 -4.232827 959.646536 1.517189e+06
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 959.646544 615.279245 231.968173 2.839291 109.559651 | 0.104205 1.838570e+06 1.838570e+06 PERFORMANCE
+srun: forcing job termination
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd-localhost: error: *** STEP 263.13 ON localhost CANCELLED AT 2026-03-24T15:59:41 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd-localhost: error: *** STEP 263.14 ON localhost CANCELLED AT 2026-03-24T15:59:41 ***
+mv: cannot stat 'slurm-*': No such file or directory
+ExaMiniMD_CC
+srun: error: localhost: task 0: Killed
+srun: error: localhost: task 0: Killed
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+Tue Mar 24 16:02:58 2026
+Starting cache with ndouble:26214 period:0.000000 duration:419.000000
+
+
+Finished cache anomaly
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 70.684659 2.496125e+06
+20 0.772053 -5.390495 -4.232416 195.032922 1.418900e+06
+30 0.620846 -5.164015 -4.232746 270.985030 2.323013e+06
+40 0.717872 -5.309763 -4.232956 395.758235 1.414068e+06
+50 0.714213 -5.304141 -4.232821 469.266403 2.400247e+06
+60 0.708668 -5.295827 -4.232825 587.829406 1.488135e+06
+70 0.717530 -5.309131 -4.232837 656.432051 2.571880e+06
+80 0.726155 -5.322068 -4.232835 772.606244 1.518735e+06
+90 0.730632 -5.328778 -4.232830 841.175854 2.573119e+06
+100 0.733009 -5.332341 -4.232827 957.335491 1.518925e+06
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 957.335498 614.242710 231.163037 2.814871 109.114696 | 0.104457 1.843009e+06 1.843009e+06 PERFORMANCE
+srun: forcing job termination
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd-localhost: error: *** STEP 263.15 ON localhost CANCELLED AT 2026-03-24T16:17:42 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd-localhost: error: *** STEP 263.16 ON localhost CANCELLED AT 2026-03-24T16:17:42 ***
+mv: cannot stat 'slurm-*': No such file or directory
+ExaMiniMD_CC
+srun: error: localhost: task 0: Killed
+srun: error: localhost: task 0: Killed
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+Tue Mar 24 16:21:41 2026
+Starting cache with ndouble:2097152 period:0.000000 duration:491.000000
+
+
+Finished cache anomaly
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 71.357819 2.472578e+06
+20 0.772053 -5.390495 -4.232416 194.231380 1.435929e+06
+30 0.620846 -5.164015 -4.232746 270.820677 2.303687e+06
+40 0.717872 -5.309763 -4.232956 396.884555 1.399590e+06
+50 0.714213 -5.304141 -4.232821 472.826366 2.323328e+06
+60 0.708668 -5.295827 -4.232825 598.081773 1.408624e+06
+70 0.717530 -5.309131 -4.232837 669.686428 2.464054e+06
+80 0.726155 -5.322068 -4.232835 786.590619 1.509251e+06
+90 0.730632 -5.328778 -4.232830 855.870723 2.546731e+06
+100 0.733009 -5.332341 -4.232827 972.702292 1.510189e+06
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 972.702300 625.427184 233.355058 2.812180 111.107680 | 0.102806 1.813893e+06 1.813893e+06 PERFORMANCE
+srun: forcing job termination
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd-localhost: error: *** STEP 263.22 ON localhost CANCELLED AT 2026-03-24T16:35:58 ***
+slurmstepd-localhost: error: *** STEP 263.19 ON localhost CANCELLED AT 2026-03-24T16:35:58 ***
+mv: cannot stat 'slurm-*': No such file or directory
+ldmsd: no process found
+srun: error: localhost: task 0: Killed
+srun: error: localhost: task 0: Killed

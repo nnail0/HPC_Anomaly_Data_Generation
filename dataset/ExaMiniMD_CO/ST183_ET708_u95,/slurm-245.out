@@ -1,0 +1,365 @@
+ExaMiniMD
+srun: error: localhost: task 0: Exited with exit code 2
+srun: error: localhost: task 0: Exited with exit code 2
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 70.815506 2.491513e+06
+20 0.772053 -5.390495 -4.232416 188.709707 1.496577e+06
+30 0.620846 -5.164015 -4.232746 258.364421 2.533034e+06
+40 0.717872 -5.309763 -4.232956 375.161305 1.510638e+06
+50 0.714213 -5.304141 -4.232821 443.915759 2.566201e+06
+60 0.708668 -5.295827 -4.232825 560.018519 1.519669e+06
+70 0.717530 -5.309131 -4.232837 628.719179 2.568211e+06
+80 0.726155 -5.322068 -4.232835 744.772638 1.520315e+06
+90 0.730632 -5.328778 -4.232830 813.424001 2.570055e+06
+100 0.733009 -5.332341 -4.232827 929.505769 1.519944e+06
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 929.505777 595.933535 227.753695 2.423665 103.394696 | 0.107584 1.898189e+06 1.898189e+06 PERFORMANCE
+/var/lib/slurm/slurmd/job00245/slurm_script: line 20: kill: (1818511) - No such process
+/var/lib/slurm/slurmd/job00245/slurm_script: line 21: kill: (1818510) - No such process
+ExaMiniMD_CO
+srun: error: localhost: task 0: Exited with exit code 2
+srun: error: localhost: task 0: Exited with exit code 2
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+Tue Mar  3 13:51:06 2026
+Starting cpuoccupy with utilization:95%
+
+Exiting cpuoccupy, duration=526s
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 71.098207 2.481606e+06
+20 0.772053 -5.390495 -4.232416 197.649510 1.394199e+06
+30 0.620846 -5.164015 -4.232746 274.735196 2.288852e+06
+40 0.717872 -5.309763 -4.232956 400.941067 1.398015e+06
+50 0.714213 -5.304141 -4.232821 475.327107 2.371920e+06
+60 0.708668 -5.295827 -4.232825 599.770684 1.417813e+06
+70 0.717530 -5.309131 -4.232837 668.552568 2.565178e+06
+80 0.726155 -5.322068 -4.232835 784.929123 1.516094e+06
+90 0.730632 -5.328778 -4.232830 853.642369 2.567740e+06
+100 0.733009 -5.332341 -4.232827 969.958883 1.516876e+06
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 969.958890 624.326079 232.244296 2.694346 110.693988 | 0.103097 1.819023e+06 1.819023e+06 PERFORMANCE
+/var/lib/slurm/slurmd/job00245/slurm_script: line 48: kill: (1818792) - No such process
+/var/lib/slurm/slurmd/job00245/slurm_script: line 49: kill: (1818791) - No such process
+ExaMiniMD_ML
+srun: error: localhost: task 0: Exited with exit code 2
+srun: error: localhost: task 0: Exited with exit code 2
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+Tue Mar  3 14:08:50 2026
+Starting leak with size:10485760 period:0.200000 duration:622.000000
+
+Tue Mar  3 14:19:12 2026
+Finished leak.
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 70.888116 2.488961e+06
+20 0.772053 -5.390495 -4.232416 189.094784 1.492621e+06
+30 0.620846 -5.164015 -4.232746 258.940528 2.526106e+06
+40 0.717872 -5.309763 -4.232956 376.093178 1.506050e+06
+50 0.714213 -5.304141 -4.232821 445.042271 2.558957e+06
+60 0.708668 -5.295827 -4.232825 561.501392 1.515019e+06
+70 0.717530 -5.309131 -4.232837 630.538779 2.555684e+06
+80 0.726155 -5.322068 -4.232835 747.192480 1.512492e+06
+90 0.730632 -5.328778 -4.232830 815.844612 2.570026e+06
+100 0.733009 -5.332341 -4.232827 932.010979 1.518837e+06
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 932.010987 597.146406 228.641893 2.426965 103.795519 | 0.107295 1.893087e+06 1.893087e+06 PERFORMANCE
+/var/lib/slurm/slurmd/job00245/slurm_script: line 74: kill: (1818966) - No such process
+/var/lib/slurm/slurmd/job00245/slurm_script: line 75: kill: (1818965) - No such process
+mv: cannot stat 'slurm-*': No such file or directory
+ExaMiniMD_CC
+srun: error: localhost: task 0: Exited with exit code 2
+srun: error: localhost: task 0: Exited with exit code 2
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+Tue Mar  3 14:27:26 2026
+Starting cache with ndouble:3276 period:0.000000 duration:482.000000
+
+
+Finished cache anomaly
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 70.616686 2.498528e+06
+20 0.772053 -5.390495 -4.232416 193.897322 1.431188e+06
+30 0.620846 -5.164015 -4.232746 269.052161 2.347657e+06
+40 0.717872 -5.309763 -4.232956 392.780323 1.426011e+06
+50 0.714213 -5.304141 -4.232821 466.559471 2.391431e+06
+60 0.708668 -5.295827 -4.232825 588.499919 1.446917e+06
+70 0.717530 -5.309131 -4.232837 657.076733 2.572849e+06
+80 0.726155 -5.322068 -4.232835 773.193321 1.519488e+06
+90 0.730632 -5.328778 -4.232830 841.715121 2.574914e+06
+100 0.733009 -5.332341 -4.232827 957.768387 1.520317e+06
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 957.768395 613.684929 231.904397 2.838655 109.340245 | 0.104409 1.842176e+06 1.842176e+06 PERFORMANCE
+/var/lib/slurm/slurmd/job00245/slurm_script: line 100: kill: (1819129) - No such process
+/var/lib/slurm/slurmd/job00245/slurm_script: line 101: kill: (1819128) - No such process
+mv: cannot stat 'slurm-*': No such file or directory
+ExaMiniMD_CC
+srun: error: localhost: task 0: Exited with exit code 2
+srun: error: localhost: task 0: Exited with exit code 2
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+Tue Mar  3 14:44:39 2026
+Starting cache with ndouble:26214 period:0.000000 duration:534.000000
+
+
+Finished cache anomaly
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 73.171878 2.411278e+06
+20 0.772053 -5.390495 -4.232416 199.646851 1.395041e+06
+30 0.620846 -5.164015 -4.232746 275.282554 2.332731e+06
+40 0.717872 -5.309763 -4.232956 399.912233 1.415696e+06
+50 0.714213 -5.304141 -4.232821 474.845359 2.354603e+06
+60 0.708668 -5.295827 -4.232825 597.189377 1.442145e+06
+70 0.717530 -5.309131 -4.232837 666.061392 2.561821e+06
+80 0.726155 -5.322068 -4.232835 782.376641 1.516893e+06
+90 0.730632 -5.328778 -4.232830 851.181712 2.564313e+06
+100 0.733009 -5.332341 -4.232827 967.483457 1.517069e+06
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 967.483464 621.652055 231.746109 2.854245 111.230836 | 0.103361 1.823677e+06 1.823677e+06 PERFORMANCE
+/var/lib/slurm/slurmd/job00245/slurm_script: line 126: kill: (1819294) - No such process
+/var/lib/slurm/slurmd/job00245/slurm_script: line 127: kill: (1819293) - No such process
+mv: cannot stat 'slurm-*': No such file or directory
+ExaMiniMD_CC
+srun: error: localhost: task 0: Exited with exit code 2
+srun: error: localhost: task 0: Exited with exit code 2
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+Tue Mar  3 15:01:41 2026
+Starting cache with ndouble:2097152 period:0.000000 duration:677.000000
+
+
+Finished cache anomaly
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 77.577991 2.274328e+06
+20 0.772053 -5.390495 -4.232416 204.363990 1.391619e+06
+30 0.620846 -5.164015 -4.232746 281.063991 2.300362e+06
+40 0.717872 -5.309763 -4.232956 407.188790 1.398914e+06
+50 0.714213 -5.304141 -4.232821 482.284989 2.349490e+06
+60 0.708668 -5.295827 -4.232825 607.398164 1.410225e+06
+70 0.717530 -5.309131 -4.232837 680.623600 2.409515e+06
+80 0.726155 -5.322068 -4.232835 796.832800 1.518277e+06
+90 0.730632 -5.328778 -4.232830 865.445746 2.571494e+06
+100 0.733009 -5.332341 -4.232827 981.628065 1.518628e+06
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 981.628073 632.965543 233.329633 2.876210 112.456459 | 0.101872 1.797399e+06 1.797399e+06 PERFORMANCE
+/var/lib/slurm/slurmd/job00245/slurm_script: line 152: kill: (1819459) - No such process
+/var/lib/slurm/slurmd/job00245/slurm_script: line 153: kill: (1819458) - No such process
+mv: cannot stat 'slurm-*': No such file or directory
+ldmsd: no process found

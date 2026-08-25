@@ -1,0 +1,178 @@
+ExaMiniMD
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 70.372741 2.507189e+06
+20 0.772053 -5.390495 -4.232416 187.882288 1.501476e+06
+30 0.620846 -5.164015 -4.232746 257.159115 2.546851e+06
+40 0.717872 -5.309763 -4.232956 373.683027 1.514176e+06
+50 0.714213 -5.304141 -4.232821 442.250271 2.573208e+06
+60 0.708668 -5.295827 -4.232825 558.345126 1.519772e+06
+70 0.717530 -5.309131 -4.232837 627.063884 2.567534e+06
+80 0.726155 -5.322068 -4.232835 745.988432 1.483611e+06
+90 0.730632 -5.328778 -4.232830 814.465677 2.576590e+06
+100 0.733009 -5.332341 -4.232827 930.280060 1.523453e+06
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 930.280068 595.879281 227.979143 2.442713 103.978724 | 0.107495 1.896609e+06 1.896609e+06 PERFORMANCE
+srun: forcing job termination
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd-localhost: error: *** STEP 295.0 ON localhost CANCELLED AT 2026-06-10T14:54:05 ***
+slurmstepd-localhost: error: *** STEP 295.1 ON localhost CANCELLED AT 2026-06-10T14:54:05 ***
+ExaMiniMD_CO
+srun: error: localhost: task 0: Killed
+srun: error: localhost: task 0: Killed
+srun: Job 295 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Step created for StepId=295.7
+srun: error: localhost: task 0: Segmentation fault (core dumped)
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+Wed Jun 10 14:56:44 2026
+Starting cpuoccupy with utilization:95%
+
+Exiting cpuoccupy, duration=621s
+#=========================================================
+
+Using: ForceLJNeighFull Neighbor2D CommMPI BinningKKSort
+Atoms: 17643776 17643776
+
+#Timestep Temperature PotE ETot Time Atomsteps/s
+0 1.400000 -6.332812 -4.232812 0.000000 0.000000e+00
+10 1.267049 -6.133725 -4.233153 76.271027 2.313300e+06
+20 0.772053 -5.390495 -4.232416 202.535990 1.397361e+06
+30 0.620846 -5.164015 -4.232746 278.636992 2.318468e+06
+40 0.717872 -5.309763 -4.232956 402.925604 1.419581e+06
+50 0.714213 -5.304141 -4.232821 477.728992 2.358687e+06
+60 0.708668 -5.295827 -4.232825 599.151905 1.453085e+06
+70 0.717530 -5.309131 -4.232837 667.653812 2.575662e+06
+80 0.726155 -5.322068 -4.232835 783.926529 1.517448e+06
+90 0.730632 -5.328778 -4.232830 852.365731 2.578022e+06
+100 0.733009 -5.332341 -4.232827 968.396282 1.520615e+06
+
+#Procs Particles | Time T_Force T_Neigh T_Comm T_Other | Steps/s Atomsteps/s Atomsteps/(proc*s)
+1 17643776 | 968.396289 624.292954 230.871831 2.737218 110.494100 | 0.103264 1.821958e+06 1.821958e+06 PERFORMANCE
+srun: forcing job termination
+/var/lib/slurm/slurmd/job00295/slurm_script: line 52: kill: (3015324) - No such process
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd-localhost: error: *** STEP 295.3 ON localhost CANCELLED AT 2026-06-10T15:14:24 ***
+ExaMiniMD_ML
+srun: error: localhost: task 0: Killed
+Host Parallel Execution Space:
+  KOKKOS_ENABLE_OPENMP: yes
+
+OpenMP Runtime Configuration:
+Kokkos::OpenMP thread_pool_topology[ 1 x 20 x 1 ]
+
+#InputFile:
+#=========================================================
+# 3d Lennard-Jones melt 
+
+units lj 
+atom_style atomic 
+
+newton off 
+lattice fcc 0.8442 
+region box block 0 164 0 164 0 164 
+create_box 1 box 
+create_atoms 1 box 
+mass 1 2.0 
+
+velocity all create 1.4 87287 loop geom 
+
+pair_style lj/cut 2.5 
+pair_coeff 1 1 1.0 1.0 2.5 
+
+neighbor 0.3 bin 
+neigh_modify delay 0 every 20 check no 
+fix 1 all nve 
+thermo 10 
+
+run 100 
+Wed Jun 10 15:16:53 2026
+Starting leak with size:10485760 period:0.200000 duration:528.000000
+
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: got SIGCONT
+srun: got SIGCONT
+srun: got SIGCONT
+srun: got SIGCONT
+slurmstepd-localhost: error: *** STEP 295.9 ON localhost CANCELLED AT 2026-06-10T15:19:53 ***
+slurmstepd-localhost: error: *** STEP 295.8 ON localhost CANCELLED AT 2026-06-10T15:19:54 ***
+slurmstepd-localhost: error: *** JOB 295 ON localhost CANCELLED AT 2026-06-10T15:19:54 ***
+srun: forcing job termination
+srun: forcing job termination
+srun: forcing job termination
+srun: forcing job termination
+slurmstepd-localhost: error: *** STEP 295.10 ON localhost CANCELLED AT 2026-06-10T15:19:54 ***
+slurmstepd-localhost: error: *** STEP 295.11 ON localhost CANCELLED AT 2026-06-10T15:19:54 ***
+srun: error: localhost: task 0: Terminated
+srun: error: localhost: task 0: Terminated

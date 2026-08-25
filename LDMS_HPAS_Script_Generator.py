@@ -59,6 +59,7 @@ def main():
     script += "if [ -d \"logs\" ]; then :; else mkdir logs; fi\n\n"
 
     # Run with no anomalies
+    script += "INIT_START_TIME = $(date +%s)\n"
     if args.wait:
         script += "sleep " + str(args.wait) + "\n"
     script += "echo \"" + args.name + "\"\n"
@@ -66,6 +67,8 @@ def main():
     script += "LDMS_SAMPLER_PID=$!\n"
     script += "srun " + args.ldmsd_srun_args + " ldmsd -x sock:20001 -l logs/aggregator.log -c conf/aggregator.conf &\n"
     script += "LDMS_AGG_PID=$!\n"
+    script += "INIT_END_TIME= $(date +%s)\n"
+    script += "echo \"Initialization time: $(($INIT_END_TIME - $INIT_START_TIME))"
     script += "APP_START_TIME=$(date +%s)\n"
     script += "srun " + args.app_srun_args + " " + args.command + "\n"
     script += "APP_END_TIME=$(date +%s)\n"
@@ -87,6 +90,8 @@ def main():
     script += "fi\n"
     script += "mkdir data\n"
     script += "mkdir logs\n\n"
+    # nathaniel did not need to do this, but I had issues with no data collection after job 1. 
+    script += "killall ldmsd"
 
     # Get anomaly abbreviations for use in directory names
     abbrevs = []
@@ -106,6 +111,7 @@ def main():
 
     # Run with single anomalies
     for i in range(len(args.hpas_anomalies)):
+        script += "INIT_START_TIME = $(date +%s)\n"
         if args.wait:
             script += "sleep " + str(args.wait) + "\n"
         script += "echo \"" + args.name + "_" + abbrevs[i] + "\"\n"
@@ -117,6 +123,8 @@ def main():
         script += "LDMS_AGG_PID=$!\n"
         script += "srun " + args.hpas_srun_args + " hpas " + args.hpas_anomalies[i] + " -t $ANOM_START_TIME -d $(($ANOM_END_TIME - $ANOM_START_TIME)) &\n"
         script += "ANOM_PID=$!\n"
+        script += "INIT_END_TIME= $(date +%s)\n"
+        script += "echo \"Initialization time: (($INIT_END_TIME - $INIT_START_TIME))"
         script += "srun " + args.app_srun_args + " " + args.command + "\n"
         script += "kill $LDMS_AGG_PID\n"
         script += "kill $LDMS_SAMPLER_PID\n"
@@ -133,6 +141,7 @@ def main():
         script += "fi\n"
         script += "mkdir data\n"
         script += "mkdir logs\n\n"
+        script += "killall ldmsd"
 
     if args.multiple == "separate" or args.multiple == "both":
         # Run with two anomalies at separate times
@@ -171,6 +180,7 @@ def main():
                 script += "fi\n"
                 script += "mkdir data\n"
                 script += "mkdir logs\n\n"
+                script += "killall ldmsd"
 
     if args.multiple == "overlapping" or args.multiple == "both":
         # Run with two anomalies overlapping
@@ -209,9 +219,7 @@ def main():
                 script += "fi\n"
                 script += "mkdir data\n"
                 script += "mkdir logs\n\n"
-
-    # kill processes to ensure no conflicts with future runs.
-    script += "killall ldmsd \n"
+                script += "killall ldmsd"
 
     with open (args.name + "_LDMS_HPAS.sh", "w") as script_file:
         script_file.write(script)

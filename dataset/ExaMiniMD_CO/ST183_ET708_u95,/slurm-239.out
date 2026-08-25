@@ -1,0 +1,14 @@
+ExaMiniMD
+1814734
+1814735
+Initalization time: 0
+srun: error: Unable to create step for job 239: More processors requested than permitted
+1814743
+srun: error: Unable to create step for job 239: More processors requested than permitted
+srun: error: localhost: task 0: Exited with exit code 2
+
+App duration:  0
+/var/lib/slurm/slurmd/job00239/slurm_script: line 37: kill: (1814735) - No such process
+App duration less than 60 seconds - too short!
+srun: Cancelled pending job step with signal 15
+srun: error: Unable to create step for job 239: Job/step already completing or completed

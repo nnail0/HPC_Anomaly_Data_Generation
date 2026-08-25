@@ -1,0 +1,231 @@
+     INFO: ldmsd: Listening on sock:20001 using `sock` transport and `none` authentication
+  WARNING: config: 'interval' is begin deprecated. Please use 'reconnect' with 'prdcr_add' or 'prdcr_start*' in the future.
+    DEBUG: producer: ldmsd_prdcr_new(name prdcr1, xprt sock, host ubuntu-rog, port 10001, type 0, intv 20000000
+    DEBUG: config: msg_no 2 flags 3 rec_len 28 rsp_err 0
+    DEBUG: config: msg_no 6 flags 3 rec_len 28 rsp_err 0
+    DEBUG: config: msg_no 7 flags 3 rec_len 43 rsp_err 0
+    DEBUG: config: Checking for 'store_csv' in '/home/nathaniel-filer/ldms/lib/ovis-ldms'
+    DEBUG: config: msg_no 11 flags 3 rec_len 28 rsp_err 0
+    DEBUG: ldmsd: ldmsd_plugattr_create: called without conf file.
+    DEBUG: store.store_csv.store_csv: parsed (null)
+    DEBUG: config: msg_no 14 flags 3 rec_len 28 rsp_err 0
+    DEBUG: config: msg_no 17 flags 3 rec_len 28 rsp_err 0
+    DEBUG: config: msg_no 20 flags 3 rec_len 28 rsp_err 0
+    DEBUG: config: msg_no 23 flags 3 rec_len 28 rsp_err 0
+    DEBUG: config: msg_no 26 flags 3 rec_len 28 rsp_err 0
+     INFO: ldmsd: Processing the config file 'conf/aggregator.conf' is done.
+     INFO: producer: Starting producer prdcr1
+    DEBUG: updater: updtr 'update_all' getting auto-schedule
+     INFO: ldmsd: Enabling in-band config
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380001b50, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380002520, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380002ef0, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x7643800038c0, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380004290, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380004c60, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380005630, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED
+    DEBUG: xprt.zap.sock: 1569507 ep: 0x764380006000, thread: 0x764380011d60, sock_ev_cb() events 001d err 0
+     INFO: producer: prdcr_connect_cb:803 Producer prdcr1 (sock ubuntu-rog:10001:none) conn_state: 2 LDMSD_PRDCR_STATE_CONNECTING event type: ERROR
+     INFO: producer: Producer prdcr1: connection error to sock ubuntu-rog:10001
+     INFO: producer: prdcr_connect_cb:872 Producer (after reset) prdcr1 (sock ubuntu-rog:10001) conn_state: 1 LDMSD_PRDCR_STATE_DISCONNECTED

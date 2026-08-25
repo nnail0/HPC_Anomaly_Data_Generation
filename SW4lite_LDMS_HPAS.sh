@@ -8,10 +8,12 @@
 if [ -d "data" ]; then :; else mkdir data; fi
 if [ -d "logs" ]; then :; else mkdir logs; fi
 
+# export SUBSCRIBER_DATA='{"papi_sampler":{"file":"/home/nathaniel-filer/papi.json"}}'
+
 echo "SW4lite"
-srun --exclusive --ntasks-per-node=1 --cpus-per-task=1 --mem=1G ldmsd -x sock:10001 -l logs/sampler.log -c conf/sampler.conf &
+srun --exclusive --ntasks-per-node=1 --cpus-per-task=1 --mem=1G ldmsd -x sock:10001 -l logs/sampler.log -c conf/sampler.conf -v DEBUG &
 LDMS_SAMPLER_PID=$!
-srun --exclusive --ntasks-per-node=1 --cpus-per-task=1 --mem=1G ldmsd -x sock:20001 -l logs/aggregator.log -c conf/aggregator.conf &
+srun --exclusive --ntasks-per-node=1 --cpus-per-task=1 --mem=1G ldmsd -x sock:20001 -l logs/aggregator.log -c conf/aggregator.conf -v DEBUG &
 LDMS_AGG_PID=$!
 APP_START_TIME=$(date +%s)
 srun --exclusive --cpu-bind=verbose --ntasks-per-node=1 --cpus-per-task=8 --mem=20G sw4lite ./input_files/SW4lite.in

@@ -1,0 +1,6 @@
+    ERROR: config: Error 2 plugin 'store_csv': failed to load the plugin, dlerror: /home/nathaniel-filer/ldms/lib/ovis-ldms/libstore_csv.so: cannot open shared object file: No such file or directory
+    ERROR: config: msg_no 11: error 2: Error 2 plugin 'store_csv': failed to load the plugin, dlerror: /home/nathaniel-filer/ldms/lib/ovis-ldms/libstore_csv.so: cannot open shared object file: No such file or directory
+
+    ERROR: config: Configuration error at line 11 (conf/aggregator.conf)
+         : ldmsd: LDMSD_ LDMS Daemon exiting...status 2, Error 2 processing configuration file 'conf/aggregator.conf'
+         : ldmsd: LDMSD_ cleanup end.

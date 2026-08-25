@@ -1,0 +1,14 @@
+ExaMiniMD
+1814287
+1814288
+Initalization time: 0
+srun: error: Unable to create step for job 237: More processors requested than permitted
+
+srun: error: Unable to create step for job 237: More processors requested than permitted
+
+srun: error: localhost: task 0: Exited with exit code 2
+App duration:  0
+srun: forcing job termination
+App duration less than 60 seconds - too short!
+srun: Cancelled pending job step with signal 15
+srun: error: Unable to create step for job 237: Job/step already completing or completed

@@ -1,0 +1,10 @@
+{
+  "events": [
+    { "event": "instructions" },
+    { "event": "pipeline/inst_retired.any" },
+    { "event": "cpu/L1-dcache-loads/" },
+    { "event": "cache/mem_load_retired.l1_miss" },
+    { "event": "cache/l1d.replacement" },
+    { "event": "pipeline/uops_executed.stall_cycles"}
+  ]
+}
